@@ -1,40 +1,44 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { BrowserModule } from "@angular/platform-browser";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { NgModule } from "@angular/core";
+import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule,
-         MatCheckboxModule,
-         MatToolbarModule,
-         MatInputModule,
-         MatProgressSpinnerModule,
-         MatCardModule,
-         MatMenuModule,
-         MatIconModule,
-         MatSidenavModule} from '@angular/material';
+import { AppComponent } from "./app.component";
+import { NavbarComponent } from "./navbar/navbar.component";
+import { AppRoutingModule } from "./app-routing.module";
+import { AuthInterceptor } from "./auth/auth-interceptor";
+import { ErrorInterceptor } from "./error-interceptor";
+import { ErrorComponent } from "./error/error.component";
+import { AngularMaterialModule } from "./angular-material.module";
+import { PostsModule } from "./posts/posts.module";
+import { PortfolioComponent } from "./portfolio/portfolio.component";
+import { BlogComponent } from "./blog/blog.component";
+import { PythonComponent } from "./python/python.component";
+import { JavascriptComponent } from "./javascript/javascript.component";
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent
+    NavbarComponent,
+    ErrorComponent,
+    PortfolioComponent,
+    BlogComponent,
+    PythonComponent,
+    JavascriptComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatButtonModule,
-    MatIconModule,
-    MatCheckboxModule,
-    MatToolbarModule,
-    MatInputModule,
-    MatProgressSpinnerModule,
-    MatCardModule,
-    MatMenuModule,
-    MatSidenavModule
+    HttpClientModule,
+    AngularMaterialModule,
+    PostsModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true }
+  ],
+  bootstrap: [AppComponent],
+  entryComponents: [ErrorComponent]
 })
-export class AppModule { }
+export class AppModule {}

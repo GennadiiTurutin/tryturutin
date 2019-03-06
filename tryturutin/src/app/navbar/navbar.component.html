@@ -1,20 +1,30 @@
-<mat-card class="demo-panel">
-  <mat-card-title>
-    TryTurutin
-  </mat-card-title>
-  <mat-card-content>
-    <mat-sidenav-container class="example-container">
-      <mat-sidenav #sidenav class="example-sidenav">
-        Here is my sidenav menu
-      </mat-sidenav>
+<mat-toolbar>  
+  <mat-toolbar-row>
+    <button mat-menu-item>Python</button>
+    <button mat-menu-item>JavaScript</button>
+  </mat-toolbar-row>
+</mat-toolbar>
 
-      <div class="example-sidenav-content">
-        <button type="button" mat-button (click)="sidenav.open()">
-          Open sidenav
-        </button>
-      </div>
+<mat-toolbar>  
+    <mat-toolbar-row>
+        <button mat-menu-item>About me</button>
+        <button mat-menu-item>Portfolio</button>
+        <button mat-menu-item>Blog</button>
+    </mat-toolbar-row>
+</mat-toolbar>    
+<mat-toolbar>  
+    <mat-toolbar-row> 
+        <button *ngIf="!userIsAuthenticated" mat-menu-item>Login</button>
+        <button *ngIf="!userIsAuthenticated" mat-menu-item>Register</button>
+        <button *ngIf="userIsAuthenticated" mat-menu-item>Logout</button>
+    </mat-toolbar-row>
+</mat-toolbar>
+<mat-toolbar>  
+    <mat-toolbar-row> 
+        <button mat-menu-item>New Post</button>
+    </mat-toolbar-row>
+</mat-toolbar>
 
-    </mat-sidenav-container>
-  </mat-card-content>
-</mat-card>
 
+<mat-menu>
+</mat-menu>
