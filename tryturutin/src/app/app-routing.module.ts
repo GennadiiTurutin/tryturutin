@@ -1,5 +1,6 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
+import { HomeComponent } from "./home/home.component";
 import { PostListComponent } from "./posts/post-list/post-list.component";
 import { PostCreateComponent } from "./posts/post-create/post-create.component";
 import { AuthGuard } from "./auth/auth.guard";
@@ -9,7 +10,7 @@ import { PythonComponent } from "./python/python.component";
 import { JavascriptComponent } from "./javascript/javascript.component";
 
 const routes: Routes = [
-  { path: "", component: PostListComponent },
+  { path: "", component: HomeComponent },
   { path: "blog", component: BlogComponent },
   { path: "portfolio", component: PortfolioComponent },
   { path: "python", component: PythonComponent },

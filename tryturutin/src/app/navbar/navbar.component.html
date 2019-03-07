@@ -1,27 +1,14 @@
-<mat-toolbar>  
+<mat-toolbar>
   <mat-toolbar-row>
     <button mat-menu-item>Python</button>
     <button mat-menu-item>JavaScript</button>
   </mat-toolbar-row>
 </mat-toolbar>
+<app-about></app-about>
 
-<mat-toolbar>  
+<mat-toolbar>
     <mat-toolbar-row>
-        <button mat-menu-item>About me</button>
-        <button mat-menu-item>Portfolio</button>
         <button mat-menu-item>Blog</button>
-    </mat-toolbar-row>
-</mat-toolbar>    
-<mat-toolbar>  
-    <mat-toolbar-row> 
-        <button *ngIf="!userIsAuthenticated" mat-menu-item>Login</button>
-        <button *ngIf="!userIsAuthenticated" mat-menu-item>Register</button>
-        <button *ngIf="userIsAuthenticated" mat-menu-item>Logout</button>
-    </mat-toolbar-row>
-</mat-toolbar>
-<mat-toolbar>  
-    <mat-toolbar-row> 
-        <button mat-menu-item>New Post</button>
     </mat-toolbar-row>
 </mat-toolbar>
 
