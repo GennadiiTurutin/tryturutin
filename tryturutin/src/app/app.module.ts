@@ -5,35 +5,51 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AlertModule } from 'ngx-bootstrap';
 
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './navbar/navbar.component';
+import { NavbarComponent } from './main/navbar/navbar.component';
+import { Navbar2Component } from './main/navbar2/navbar2.component';
 import { AppRoutingModule } from './app-routing.module';
-import { AuthInterceptor } from './auth/auth-interceptor';
-import { ErrorInterceptor } from './error-interceptor';
-import { ErrorComponent } from './error/error.component';
-import { AngularMaterialModule } from './angular-material.module';
-import { PostsModule } from './posts/posts.module';
-import { PortfolioComponent } from './portfolio/portfolio.component';
-import { BlogComponent } from './blog/blog.component';
-import { PythonComponent } from './python/python.component';
-import { JavascriptComponent } from './javascript/javascript.component';
-import { ContactComponent } from './contact/contact.component';
-import { DescriptionComponent } from './description/description.component';
-import { FooterComponent } from './footer/footer.component';
-import { AboutComponent } from './about/about.component';
-import { SkillsComponent } from './skills/skills.component';
-import { HomeComponent } from './home/home.component';
-import { SubscriptionComponent } from './subscription/subscription.component';
-import { BlogsiteComponent } from './blogsite/blogsite.component';
+import { AuthInterceptor } from './myblog/auth/auth-interceptor';
+import { ErrorInterceptor } from './myblog/services/error-interceptor';
+import { ErrorComponent } from './myblog/error/error.component';
+import { PostsModule } from './myblog/posts/posts.module';
+import { PortfolioComponent } from './main/portfolio/portfolio.component';
+import { BlogComponent } from './main/blog/blog.component';
+import { ContactComponent } from './main/contact/contact.component';
+import { DescriptionComponent } from './main/description/description.component';
+import { FooterComponent } from './main/footer/footer.component';
+import { AboutComponent } from './main/about/about.component';
+import { SkillsComponent } from './main/skills/skills.component';
+import { HomeComponent } from './main/home.component';
+import { SubscriptionComponent } from './myblog/services/subscription/subscription.component';
+import { MyblogComponent } from './myblog/myblog.component';
+import { PrinciplesComponent } from './main/principles/principles.component';
+import {
+  MatInputModule,
+  MatCardModule,
+  MatButtonModule,
+  MatToolbarModule,
+  MatExpansionModule,
+  MatProgressSpinnerModule,
+  MatPaginatorModule,
+  MatDialogModule,
+  MatMenuModule,
+  MatIconModule,
+  MatSidenavModule,
+  MatCheckboxModule,
+  MatTabsModule,
+  MatFormFieldModule,
+  MatSelectModule,
+  MatOptionModule
+} from "@angular/material";
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
+    Navbar2Component,
     ErrorComponent,
     PortfolioComponent,
     BlogComponent,
-    PythonComponent,
-    JavascriptComponent,
     ContactComponent,
     DescriptionComponent,
     FooterComponent,
@@ -41,16 +57,32 @@ import { BlogsiteComponent } from './blogsite/blogsite.component';
     SkillsComponent,
     SubscriptionComponent,
     HomeComponent,
-    BlogsiteComponent
+    MyblogComponent,
+    PrinciplesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    AngularMaterialModule,
     PostsModule,
-    AlertModule.forRoot()
+    AlertModule.forRoot(),
+    MatInputModule,
+    MatCardModule,
+    MatButtonModule,
+    MatToolbarModule,
+    MatExpansionModule,
+    MatProgressSpinnerModule,
+    MatPaginatorModule,
+    MatDialogModule,
+    MatMenuModule,
+    MatIconModule,
+    MatSidenavModule,
+    MatCheckboxModule,
+    MatTabsModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatOptionModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
@@ -60,3 +92,5 @@ import { BlogsiteComponent } from './blogsite/blogsite.component';
   entryComponents: [ErrorComponent]
 })
 export class AppModule {}
+
+
