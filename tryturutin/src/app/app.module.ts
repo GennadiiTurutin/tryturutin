@@ -23,6 +23,7 @@ import { AboutComponent } from './about/about.component';
 import { SkillsComponent } from './skills/skills.component';
 import { HomeComponent } from './home/home.component';
 import { SubscriptionComponent } from './subscription/subscription.component';
+import { BlogsiteComponent } from './blogsite/blogsite.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { SubscriptionComponent } from './subscription/subscription.component';
     AboutComponent,
     SkillsComponent,
     SubscriptionComponent,
-    HomeComponent
+    HomeComponent,
+    BlogsiteComponent
   ],
   imports: [
     BrowserModule,
