@@ -1,0 +1,61 @@
+:host {
+
+    /* Backfround color */
+    --background-color-1:white;
+    --background-color-2: #F3F1F1;
+    --background-color-3: #eaf0f9;
+    --background-color-4: #3b506c;;
+    --background-color-5: #F6F5F3;
+  
+    /* Font color */
+    --font-color-1: white;
+    --font-color-2: #007b5e;;
+    --font-color-3: black;
+    --font-color-4: #9B9999;
+    /* Size */
+    --font-size-0: 40px;
+    --font-size-1: 30px;
+    --font-size-2: 20px;
+    --font-size-3: 14px;
+    /* Font style */
+    --font-style-1: 'Open Sans Condensed', sans-serif;
+    /* Margin */
+    --margin-1: 7%;
+    --margin-2: 5%;
+    --margin-3: 2%; 
+    --margin-4: 0%;
+  }
+/* Navigation bar 2 */
+  
+nav {
+    margin-bottom: var(--margin-4);
+    font-size: var(--font-size-3);
+    background-color: var(--background-color-4); 
+    border-radius: 0 !important;
+    letter-spacing: 0.2em;
+  }
+  
+nav li {
+    display: inline-block;
+  }
+
+nav li>a {
+    color: var(--font-color-1);
+    background-color: var(--background-color-4); 
+  }
+
+nav li>a:hover {
+    color: var(--font-color-2);
+  }
+  
+#link>a {
+    /*color: var(--font-color-3);*/
+    font-family: var(--font-style-1); 
+    font-weight: bold;
+  }
+  
+.navbar-toggler-icon {
+    background-image: 
+    url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  }
+
