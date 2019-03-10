@@ -12,7 +12,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AuthInterceptor } from './myblog/auth/auth-interceptor';
 import { ErrorInterceptor } from './myblog/services/error-interceptor';
 import { ErrorComponent } from './myblog/error/error.component';
-import { PostsModule } from './myblog/posts/posts.module';
 import { PortfolioComponent } from './main/portfolio/portfolio.component';
 import { BlogComponent } from './main/blog/blog.component';
 import { ContactComponent } from './main/contact/contact.component';
@@ -24,6 +23,12 @@ import { HomeComponent } from './main/home.component';
 import { SubscriptionComponent } from './myblog/services/subscription/subscription.component';
 import { MyblogComponent } from './myblog/myblog.component';
 import { PrinciplesComponent } from './main/principles/principles.component';
+import { PostCreateComponent } from "./myblog/posts/post-create/post-create.component";
+import { PostListComponent } from "./myblog/posts/post-list/post-list.component";
+import { CommonModule } from "@angular/common";
+import { RouterModule } from "@angular/router";
+import { LoginComponent } from "./myblog/auth/login/login.component";
+import { SignupComponent } from "./myblog/auth/signup/signup.component";
 import {
   MatInputModule,
   MatCardModule,
@@ -40,8 +45,12 @@ import {
   MatTabsModule,
   MatFormFieldModule,
   MatSelectModule,
-  MatOptionModule
+  MatOptionModule,
 } from "@angular/material";
+import { AdminComponent } from './myblog/admin/admin.component';
+import { BlogaboutComponent } from './myblog/blogabout/blogabout.component';
+import { BlogpostComponent } from './myblog/blogpost/blogpost.component';
+import { PostnavbarComponent } from './myblog/postnavbar/postnavbar.component';
 
 @NgModule({
   declarations: [
@@ -59,14 +68,21 @@ import {
     SubscriptionComponent,
     HomeComponent,
     MyblogComponent,
-    PrinciplesComponent
+    PrinciplesComponent,
+    PostCreateComponent, 
+    PostListComponent, 
+    AdminComponent, 
+    BlogaboutComponent, 
+    BlogpostComponent,
+    LoginComponent,
+    SignupComponent,
+    PostnavbarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    PostsModule,
     AlertModule.forRoot(),
     MatInputModule,
     MatCardModule,
@@ -85,7 +101,9 @@ import {
     MatSelectModule,
     MatOptionModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    CommonModule,
+    RouterModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },

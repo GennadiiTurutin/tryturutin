@@ -4,13 +4,25 @@ import { HomeComponent } from "./main/home.component";
 import { PostCreateComponent } from "./myblog/posts/post-create/post-create.component";
 import { AuthGuard } from "./myblog/auth/auth.guard";
 import { MyblogComponent } from './myblog/myblog.component';
+import { AdminComponent } from './myblog/admin/admin.component';
+import { BlogaboutComponent } from './myblog/blogabout/blogabout.component';
+import { BlogpostComponent } from './myblog/blogpost/blogpost.component';
+import { LoginComponent } from "./myblog/auth/login/login.component";
+import { SignupComponent } from "./myblog/auth/signup/signup.component";
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
   { path: "blog", component: MyblogComponent },
-  { path: "create", component: PostCreateComponent, canActivate: [AuthGuard] },
-  { path: "edit/:postId", component: PostCreateComponent, canActivate: [AuthGuard] },
-  { path: "auth", loadChildren: "./myblog/auth/auth.module#AuthModule"}
+  { path: "blog/about", component: BlogaboutComponent },
+  { path: "blog/posts/:postId", component: BlogpostComponent },
+  { path: "blog/admin", component: AdminComponent },
+  { path: "blog/create", component: PostCreateComponent, canActivate: [AuthGuard] },
+  { path: "blog/edit/:postId", component: PostCreateComponent, canActivate: [AuthGuard] },
+  { path: "blog/login", component: LoginComponent },
+  { path: "blog/register", component: SignupComponent },
+  { path: "login", component: LoginComponent },
+  { path: "signup", component: SignupComponent },
+  
 ];
 
 @NgModule({
