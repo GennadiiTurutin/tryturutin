@@ -3,6 +3,56 @@
 html, body { height: 100%; background-color: #343a40;}
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
+#top {
+    background-color: transparent;
+    margin:0%;
+    border-radius: 0 !important;
+    position: fixed; 
+    top: 0; 
+    z-index: 1000; 
+}
+#nav2 {
+    margin: 0%;
+}
+
+#main {
+    background-color: #3b506c;
+    margin:0%;
+    min-height:92%;
+}
+
+.navbar {
+    background-color: #3b506c;
+    border-radius: 0 !important;
+    margin:0%;
+    z-index: 0;
+} 
+
+.navbar-brand {
+    color: white;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-style: bold;
+    font-size: 20px;
+}
+
+.nav-item {
+    margin:1%;
+}
+
+.nav-link {
+    color: white;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-style: bold;
+    font-size: 20px;
+}
+
+.introduction {
+    text-align: right; 
+    margin-top:10%;
+    margin-right:10%;
+    text-shadow: 1px 1px #95aac9;
+}
+
 .title {
     font-size: 80px;
     color:white;
@@ -23,6 +73,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     color: #cfd2da;
     font-family: 'Open Sans Condensed', sans-serif;
     font-style: bold;
+    margin: 0%;
 }
 
 .caption {
@@ -31,3 +82,48 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     font-family: 'Open Sans Condensed', sans-serif;
     font-style: bold;
 }
+
+#standard {
+    text-align: center; 
+    min-height: 120%;
+    margin:0%;
+}
+
+#secondary {
+    text-align: center; 
+    min-height: 20%;
+    margin:0%;
+}
+
+
+.green {
+    background-color: #007b5e;
+}
+
+.white {
+    background-color: #f8f9fa;
+}
+
+.blue {
+    background-color: #3b506c; 
+}
+
+::ng-deep .mat-tab-label-active{
+    background-color: #343a40;
+ }
+
+::ng-deep .mat-tab-label{
+    color: white;
+    font-size:25px;
+    font-family: 'Montserrat', sans-serif;
+ }
+ 
+.example-headers-align .mat-expansion-panel-header-title,
+.example-headers-align .mat-expansion-panel-header-description {
+   flex-basis: 0;
+ }
+ 
+.example-headers-align .mat-expansion-panel-header-description {
+   justify-content: space-between;
+   align-items: center;
+ }

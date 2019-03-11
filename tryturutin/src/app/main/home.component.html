@@ -1,10 +1,207 @@
-<app-navbar></app-navbar>
-<app-about></app-about>
-<app-navbar2></app-navbar2>
-<app-skills></app-skills>
-<app-portfolio></app-portfolio>
-<app-principles></app-principles>
-<app-description></app-description> 
-<app-blog></app-blog>   
-<app-contact></app-contact>    
+<nav id="top" class="navbar navbar-expand-md sticky-top" >
+  <div class="container-fluid">
+<!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <a class="navbar-brand" href="">Gennadii Turutin</a>
+    </div> 
+  </div>
+</nav>
+
+<div id="main" class="jumbotron jumbotron-fluid">
+
+  <div class="container introduction">
+    <p class="title" >My name is Gennadii</p>
+    <p class="text"> I'm a full stack web developer</p>
+    <p class="text">I work with Django, Flask and MEAN-stack </p>
+  </div>
+</div>
+
+<nav id="nav2" class="navbar navbar-expand-md">
+  <button class="navbar-toggler" type="button" 
+    data-toggle="collapse" data-target="#navbarSupportedContent" 
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto navbar-right">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Portfolio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/">Contact</a>
+        </li>
+      </ul>
+    </div>
+</nav> 
+
+<div id="standard" class="col-lg-12 col-md-12 col-sm-12 green">
+  <div class="container-fluid">
+    <h1 class="title">My tools</h1> 
+  </div>
+  <div class="row">
+    <div class="col-lg-4 col-md-4 col-sm-12 mx-auto">
+      <h2 class="subtitle">Frameworks</h2> 
+      <p class="text">Django</p>
+      <p class="text">Flask</p>
+      <p class="text">Angular</p>
+    </div>
+
+    <div class="col-lg-4 col-md-4 col-sm-12 mx-auto">
+      <h2 class="subtitle">Database</h2> 
+      <p class="text">MySQL</p>
+      <p class="text">PostgreSQL</p>
+      <p class="text">Google Firebase</p>
+    </div>
+
+    <div class="col-lg-4 col-md-4 col-sm-12 mx-auto">
+      <h2 class="subtitle">Languages</h2> 
+      <p class="text">Python</p>
+      <p class="text">javaScript</p>
+      <p class="text">HTML/CSS</p>
+    </div>
+
+  </div>  
+</div>
+
+<div id="standard" class="col-lg-12 col-md-12 col-sm-12 mx-auto blue">
+  <div class="container-fluid">
+    <h1 class="title">Portfolio</h1>
+  </div>
+  <div class="container">
+    <mat-tab-group style="margin: 5%; color: white;">
+      <mat-tab label="noyardstick.org" class="text">
+        <h2 class="subtitle">Tools: Django, Django REST Framework, Angular,PostgreSQL</h2>
+        <p class="text">The goal of this project was to build a responsive website
+                , using the old WordPress website and its database.
+                The website has a subscription system, comments, flash
+                messages, search system, and many useful plugins, such
+                as Disqus, Toaster, etc.
+                On the back-end the website has RESTful API based on
+                Django REST Framework, on the front-end Angular 6.
+                The interaction between front-end and back-end happens
+                through module service.ts that is imported into all
+                other components.
+                To improve the performance I went for Ahead-of-Time
+                compilations.
+                The material is stored with PostgreSQL.
+                In the beginning I developed my own Custom User
+                Model with Django, but eventually chose Disqus plugin,
+                as it allows for easy authorisation with Facebook and
+                Twitter.
+        </p>
+      </mat-tab>
+
+      <mat-tab label="nadiakoch.com">
+        <h2 class="subtitle">Tools: Django, JQuery</h2>
+        <p class="text">The client wanted to have a simple and responsive website, 
+                that will look stunning both on PC, and mobile devices with an embedded Instagram feed. 
+                For integration of InstagramI chose Lightwidget. There are fading effects on the website, 
+                that were achievedwith JQuery. 
+                Later on, there will be an online store of furniture added to the website.
+        </p>
+      </mat-tab>
+
+      <mat-tab label="turutin.net">
+        <h2 class="subtitle">Tools: Flask, MySQL</h2>
+        <p class="text">I needed my personal website where I can publish posts. In this case my main focus was
+                on back-end, that’s why I didn’t employ any JavaScript framework. I chose Flask as it
+                gave me a great degree of freedom and allowed for experiments. I developed everything
+                from the ground up. It has comments, login/register system, email service, etc.
+        </p>
+      </mat-tab>
+
+      <mat-tab label="fpy.herokuapp.com">
+        <h2 class="subtitle">Tools: Flask, Bootstrap</h2>
+        <p class="text">That was my first website that I built. The choice fell on
+                Flask.
+                The website asks for a stock ticker (e.g. AAPL for Apple,
+                TSLA for Tesla), then uses Quandl to get request time
+                series data, processes with numpy and finally visualizes
+                it with pygal.
+                The website has login/register system and was built with
+                RESTful principles in mind.
+                Pygal is supported only in Chrome.
+        </p>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+</div>
+
+<div id="standard" class="col-lg-12 col-md-12 col-sm-12 mx-auto blue">
+  <div class="container-fluid">
+    <h1 class="title">Princip</h1>
+  </div>
+  <div class="row">
+    <div class="col-lg-4 col-md-4 col-sm-12 mx-auto">
+      <h2 class="subtitle">RESTful</h2>
+      <p class="text">Some text</p>
+    </div>
+
+    <div class="col-lg-4 col-md-4 col-sm-12 mx-auto">
+      <h2 class="subtitle">Responsive</h2>
+      <p class="text">Some text</p>
+    </div>
+
+    <div class="col-lg-4 col-md-4 col-sm-12 mx-auto">
+      <h2 class="subtitle">Agile</h2>
+      <p class="text">Some text</p>
+    </div>
+
+  </div>
+</div>
+            
+<div id="standard" class="col-lg-12 col-md-12 col-sm-12 mx-auto white">
+  <div class="container-fluid">
+    <h1 class="title" style="color: #3b506c;">How I built this website</h1>
+  </div>
+  <div class="row">
+    <div class="col-lg-3 col-md-3 col-sm-12 mx-auto">
+      <h2 class="subtitle">MongoDB</h2>
+      <p class="text">Some text</p>
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-12 mx-auto">
+      <h2 class="subtitle">Express</h2>
+      <p class="text">Some text</p>
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-12 mx-auto">
+      <h2 class="subtitle">Angular</h2>
+      <p class="text">Some text</p>
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-12 mx-auto">
+      <h2 class="subtitle">Node.js</h2>
+      <p class="text">Some text</p>
+    </div>
+  </div>
+</div>
+
+<div id="standard" class="col-lg-12 col-md-12 col-sm-12 mx-auto white">
+  <div class="container-fluid">
+    <h1 class="title" style="color: #3b506c;">My personal blog</h1>
+  </div>
+  <h2 class="subtitle">I would be happy it you check the blog</h2>
+  <p class="text" style="margin: 0%;">It has lorem ipsum lorem ipsum and lorem ipsum again</p>
+</div> 
+
+<div id="secondary" class="col-lg-12 col-md-12 col-sm-12 mx-auto green">
+  <div class="col-lg-8 col-md-6 col-sm-12 mx-auto">
+  </div>
+  <div class="col-lg-4 col-md-6 col-sm-12 mx-auto" style="text-align: right;">
+    <form>
+    <div class="form-group" >
+      <label for="exampleInputEmail1" style="margin: 0%;">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+
+    <div class="form-group">
+      <label for="exampleInputPassword1">Message</label>
+      <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Your message">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+</div>   
 <app-footer></app-footer>
