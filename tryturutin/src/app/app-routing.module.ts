@@ -19,10 +19,7 @@ const routes: Routes = [
   { path: "blog/create", component: PostCreateComponent, canActivate: [AuthGuard] },
   { path: "blog/edit/:postId", component: PostCreateComponent, canActivate: [AuthGuard] },
   { path: "blog/login", component: LoginComponent },
-  { path: "blog/register", component: SignupComponent },
-  { path: "login", component: LoginComponent },
-  { path: "signup", component: SignupComponent },
-  
+  { path: "blog/register", component: SignupComponent }, 
 ];
 
 @NgModule({

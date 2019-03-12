@@ -7,12 +7,11 @@ const postsRoutes = require("./routes/posts");
 const userRoutes = require("./routes/user");
 
 const app = express();
-mongodb+srv://gennadii:<password>@tryturutin-ecvwf.mongodb.net/test?retryWrites=true
 
 mongoose
   .connect(
     "mongodb+srv://gennadii:" +
-      process.env.MONGO_ATLAS_PW +
+      "LHEvT5xtqrDoe1sz" +
       "@tryturutin-ecvwf.mongodb.net/node-angular?retryWrites=true"
   )
   .then(() => {
