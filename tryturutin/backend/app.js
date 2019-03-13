@@ -12,7 +12,7 @@ mongoose
   .connect(
     "mongodb+srv://gennadii:" +
       "LHEvT5xtqrDoe1sz" +
-      "@tryturutin-ecvwf.mongodb.net/node-angular?retryWrites=true"
+      "@tryturutin-ecvwf.mongodb.net/node-angular"
   )
   .then(() => {
     console.log("Connected to database!");
